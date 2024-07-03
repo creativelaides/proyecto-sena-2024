@@ -6,7 +6,7 @@ services:
     restart: always
     container_name: postgresDB
     volumes:
-      - ./Database/postgres:/var/lib/postgresql/data
+      - database:/var/lib/postgresql/data
     ports:
       - "${PORT_DB}:5432"
     environment:
@@ -23,4 +23,7 @@ services:
     ports:
       - "${PORT_PG}:8080"
     volumes:
-      - ./Database/pgadmin/servers.json:/pgadmin4/servers.json
+      - database:/pgadmin4/servers.json
+
+volumes:
+  database:

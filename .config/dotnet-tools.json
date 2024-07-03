@@ -6,13 +6,8 @@
       "version": "8.0.6",
       "commands": [
         "dotnet-ef"
-      ]
-    },
-    "dotnet-aspnet-codegenerator": {
-      "version": "8.0.2",
-      "commands": [
-        "dotnet-aspnet-codegenerator"
-      ]
+      ],
+      "rollForward": false
     }
   }
 }

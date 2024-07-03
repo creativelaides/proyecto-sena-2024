@@ -1,6 +1,8 @@
 
 # --- Dependencies ---
 #1. Dependencies principales del proyecto
+dotnet restore
+dotnet build
 dotnet add package Microsoft.EntityFrameworkCore --version 8.0.6
 dotnet add package Microsoft.EntityFrameworkCore.Tools --version 8.0.2
 dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.4
@@ -15,7 +17,7 @@ dotnet new tool-manifest
 dotnet tool install --local dotnet-ef
 
 #2.2.1 Ejecuta las migraciones
-dotnet Add-Migration InitialCreate
+dotnet ef migrations add InitialCreate
 dotnet ef database update
 
 #2.3 Añade al manifest Asp.NET Code Generator Tool
